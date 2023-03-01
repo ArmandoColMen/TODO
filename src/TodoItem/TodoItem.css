@@ -1,0 +1,51 @@
+.TodoItem {
+  background-color: #FAFAFA;
+  /* position: relative; */
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template:
+    "check textItem delete" auto
+    "check textItem delete" auto
+    / 15% auto 15%;
+  margin-top: 24px;
+  box-shadow: -1px 1px 14px -5px rgba(46, 46, 46, 0.6);
+  box-shadow: inset -1px 1px 14px 3px rgba(196, 196, 196, 0.75);
+
+  border-radius: 1rem;
+}
+
+.Icon {
+  cursor: pointer;
+}
+
+.Icon-check {
+  /* position: absolute; */
+  grid-area: check;
+  font-weight: 200;
+  font-size: 1.3rem;
+}
+
+.Icon-check--active {
+  color: #4caf50;
+}
+
+.TodoItem-p {
+  grid-area: textItem;
+  cursor: pointer;
+}
+
+.TodoItem-p--complete {
+  text-decoration: line-through;
+}
+
+.Icon-delete {
+  /*  position: absolute; */
+  grid-area: delete;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.Icon-delete:hover {
+  color: red;
+}
